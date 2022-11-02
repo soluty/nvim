@@ -7,12 +7,12 @@ local M = {}
 M.general = {
   i = {
     -- override nvchad default mapping
-    ["<C-b>"] = { "<Nop>", "beginning of line" },
-    ["<C-e>"] = { "<Nop>", "end of line" },
-    ["<C-h>"] = { "<Nop>", "move left" },
-    ["<C-l>"] = { "<Nop>", "move right" },
-    ["<C-j>"] = { "<Nop>", "move down" },
-    ["<C-k>"] = { "<Nop>", "move up" },
+    ["<C-b>"] = { "<Nop>", "" },
+    ["<C-e>"] = { "<Nop>", "" },
+    ["<C-h>"] = { "<Nop>", "" },
+    ["<C-l>"] = { "<Nop>", "" },
+    ["<C-j>"] = { "<Nop>", "" },
+    ["<C-k>"] = { "<Nop>", "" },
     -- my own mappings
     ["<Home>"] = { "<ESC>^i", "beginning of line" },
   },
@@ -22,17 +22,17 @@ M.general = {
     ["<leader>n"] = { "<Nop>", "toggle line number" },
     ["<leader>rn"] = { "<Nop>", "toggle relative number" },
     ["<leader>uu"] = { "<Nop>", "update nvchad" },
-    ["<C-c>"] = { "<Nop>", "copy whole file" },
-    ["<C-h>"] = { "<Nop>", "window left" },
-    ["<C-l>"] = { "<Nop>", "window right" },
-    ["<C-j>"] = { "<Nop>", "window down" },
-    ["<C-k>"] = { "<Nop>", "window up" },
+    ["<C-c>"] = { "<Nop>", "" },
+    ["<C-h>"] = { "<Nop>", "" },
+    ["<C-l>"] = { "<Nop>", "" },
+    ["<C-j>"] = { "<Nop>", "" },
+    ["<C-k>"] = { "<Nop>", "" },
     -- my own mappings
     ["<Home>"] = { "^", "beginning of line" },
   },
 
   t = {
-    ["<C-x>"] = { "<Nop>", "escape terminal mode" },
+    ["<C-x>"] = { "<Nop>", "" },
     ["<Esc>"] = { termcodes "<C-\\><C-N>", "escape terminal mode" },
   },
 
@@ -42,4 +42,35 @@ M.general = {
   },
 }
 
+M.telescope = {
+  n = {
+    -- ff fa use nachad default
+    ["<leader>fs"] = { "<cmd> Telescope live_grep <CR>", "find string" },
+    ["<leader>fw"] = { "<cmd> Telescope grep_string <CR>", "find word" },
+    ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "find buffers" },
+    ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "help page" },
+    ["<leader>fo"] = { "<Nop>", "" },
+    ["<leader>fk"] = { "<cmd> Telescope keymaps <CR>", "find keymaps" },
+    ["<leader>fm"] = { "<cmd> Telescope marks <CR>", "find marks" },
+    ["<leader>ft"] = { "<cmd> Telescope builtin <CR>", "find telescope builtin" },
+    ["<leader>fr"] = { "<cmd> Telescope register <CR>", "find register" },
+    ["<leader>fvc"] = { "<cmd> Telescope command_history <CR>", "command_history" },
+    ["<leader>fvs"] = { "<cmd> Telescope search_history <CR>", "search_history" },
+    ["<leader>fvo"] = { "<cmd> Telescope vim_options <CR>", "vim_options" },
+    ["<leader>tk"] = { "<Nop>", "" },
+    ["<leader>cm"] = { "<Nop>", "" },
+    -- git search
+    ["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "git status" },
+    ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "git commits" },
+    ["<leader>gb"] = { "<cmd> Telescope git_blame <CR>", "git blame" },
+    ["<leader>gf"] = { "<cmd> Telescope git_bcommits <CR>", "git bcommits" },
+    ["<leader>gt"] = { "<cmd> Telescope git_stash <CR>", "git stash" },
+  },
+}
+
+M.lspconfig = {
+  n = {
+
+  },
+}
 return M

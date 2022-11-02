@@ -24,9 +24,12 @@ M.general = {
     ["<leader>uu"] = { "<Nop>", "update nvchad" },
     ["<C-c>"] = { "<Nop>", "" },
     ["<C-h>"] = { "<Nop>", "" },
-    ["<C-l>"] = { "<Nop>", "" },
+    -- aliyun C-i 有bug, 用C-l 代替光标回退
+    ["<C-l>"] = { "<Tab>", "" },
     ["<C-j>"] = { "<Nop>", "" },
     ["<C-k>"] = { "<Nop>", "" },
+    -- 因为spacefn的原因 ,是我的leader,所以两个,作为f的repeat
+    [",,"] = { ",", "" },
     -- my own mappings
     ["<Home>"] = { "^", "beginning of line" },
   },

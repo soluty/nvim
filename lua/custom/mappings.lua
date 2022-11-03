@@ -28,7 +28,7 @@ M.general = {
     ["<C-l>"] = { "<Tab>", "" },
     ["<C-j>"] = { "<Nop>", "" },
     ["<C-k>"] = { "<Nop>", "" },
-    -- 因为spacefn的原因 ,是我的leader,所以两个,作为f的repeat
+    -- 因为spacefn的原因 ,是我的leader
     [",,"] = { ",", "" },
     -- my own mappings
     ["<Home>"] = { "^", "beginning of line" },
@@ -73,7 +73,17 @@ M.telescope = {
 
 M.lspconfig = {
   n = {
-
+    -- 查找lsp的符号和调用
+    ["<leader>flb"] = { "<cmd> Telescope lsp_document_symbols <CR>", "lsp_document_symbols" },
+    ["<leader>flw"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "lsp_dynamic_workspace_symbols" },
+    ["<leader>flo"] = { "<cmd> Telescope lsp_outgoing_calls <CR>", "lsp_outgoing_calls" },
+    ["<leader>fli"] = { "<cmd> Telescope lsp_incoming_calls <CR>", "lsp_incoming_calls" },
+    -- 跳转，和当前光标相关，implementation, definitions, symbols，references
+    ["gi"] = { "<cmd> Telescope lsp_implementations <CR>", "lsp_implementations" },
+    ["gd"] = { "<cmd> Telescope lsp_definitions <CR>", "lsp_definitions" },
+    ["gs"] = { ":Telescope lsp_workspace_symbols query=expand('<cword>') <CR>", "lsp_workspace_symbols" },
+    ["gr"] = { "<cmd> Telescope lsp_references <CR>", "lsp_references" },
   },
 }
+
 return M

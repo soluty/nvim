@@ -1,6 +1,11 @@
-local opt = vim.opt
+local wo = vim.wo
 
-opt.relativenumber = true
-opt.timeoutlen = 1000
+wo.relativenumber = true
+vim.opt.timeoutlen = 600
 
 vim.g.mapleader = ","
+
+wo.scrolloff = 5
+wo.sidescrolloff = 5
+
+

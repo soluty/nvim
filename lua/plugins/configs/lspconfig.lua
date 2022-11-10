@@ -43,6 +43,10 @@ M.capabilities.textDocument.completion.completionItem = {
   },
 }
 
+require("neodev").setup({
+  setup_jsonls = false,
+})
+
 lspconfig.sumneko_lua.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,

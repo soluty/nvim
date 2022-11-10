@@ -32,6 +32,9 @@ M.general = {
     [",,"] = { ",", "" },
     -- my own mappings
     ["<Home>"] = { "^", "beginning of line" },
+    ["<leader>q"] = { "<cmd> wqa <CR>", "" },
+    ["<leader>ww"] = { "<C-w><C-w>", "window change" },
+    ["<leader>wc"] = { "<cmd> vs <CR>", "window create" },
   },
 
   t = {
@@ -56,7 +59,7 @@ M.telescope = {
     ["<leader>fk"] = { "<cmd> Telescope keymaps <CR>", "find keymaps" },
     ["<leader>fm"] = { "<cmd> Telescope marks <CR>", "find marks" },
     ["<leader>ft"] = { "<cmd> Telescope builtin <CR>", "find telescope builtin" },
-    ["<leader>fr"] = { "<cmd> Telescope register <CR>", "find register" },
+    ["<leader>fr"] = { "<cmd> Telescope registers <CR>", "find register" },
     ["<leader>fvc"] = { "<cmd> Telescope command_history <CR>", "command_history" },
     ["<leader>fvs"] = { "<cmd> Telescope search_history <CR>", "search_history" },
     ["<leader>fvo"] = { "<cmd> Telescope vim_options <CR>", "vim_options" },
@@ -65,7 +68,6 @@ M.telescope = {
     -- git search
     ["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "git status" },
     ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "git commits" },
-    ["<leader>gb"] = { "<cmd> Telescope git_blame <CR>", "git blame" },
     ["<leader>gf"] = { "<cmd> Telescope git_bcommits <CR>", "git bcommits" },
     ["<leader>gt"] = { "<cmd> Telescope git_stash <CR>", "git stash" },
   },
